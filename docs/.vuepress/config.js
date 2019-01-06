@@ -1,9 +1,9 @@
 module.exports = {
-    base: '/core/',
-    title: 'Kuma Cheatsheet',
-    description: 'Cheatsheet made easy',
+    base: '/spss/',
+    title: 'SPSS Cheatsheet',
+    description: 'SPSS made easy',
 
-    repo: 'Kuma-Cheatsheet/core',
+    repo: 'Kuma-Cheatsheet/spss',
     repoLabel: 'Repository',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
@@ -47,6 +47,32 @@ module.exports = {
 
         sidebar: [
             // https://vuepress.vuejs.org/theme/default-theme-config.html#sidebar
+            {
+                title: 'Data Preparation',
+                collapsable: false,
+                children: [
+                    '/Data/DataCleansing/',
+                    '/Data/DataTransformation/'
+                ]
+            },
+            {
+                title: 'Test Assumption',
+                collapsable: false,
+                children: [
+                    '/AssumptionTest/'
+                ]
+            },
+            {
+                title: 'Create Model',
+                collapsable: false,
+                children: [
+                    '/Model/TwoWayANOVA/',
+                    '/Model/LinearRegression/',
+                    '/Model/MultipleLinearRegression/',
+                    '/Model/LogisticsRegression/',
+                    '/Model/TimeSeries/'
+                ]
+            },
         ],
 
         // https://vuepress.vuejs.org/theme/default-theme-config.html#last-updated

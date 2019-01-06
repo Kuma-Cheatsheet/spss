@@ -1,6 +1,8 @@
-# Welcome to core
-This is the core of all cheatsheet.
+# Welcome to SPSS
+This cheatsheet is for using SPSS in a efficient way.
 
-If you would like to contribute and distrobute it through all cheatsheet, please make sure you are following the `CONTRIBUTE.md` guidelines. We will be updating it constantly.
+If you have spotted some issues, please create a new [isssue]().
 
-This vuepress is working on version 0.14.4 and we are ready to move up to 1.0 very soon.
+---
+
+Created by [@sagelga]() and Uncle G
