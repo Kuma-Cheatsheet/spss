@@ -1,49 +1,37 @@
 # Assumption Test
-## ทดสอบ Normality
+## Normality Test
 
 ค่าต้องกระจายแบบ Normal Distribution ไม่เบ้ไปมา
 
-สร้าง P-Plots
-
+1. สร้าง P-Plots
 - Analyze → Descriptive Statistics → P-Plots … → ใส่ตัวแปร → กด OK
 
-สร้าง report statistics
-
+2. สร้าง report statistics
 - Analyze → Descriptive Statistics → Frequencies → ใส่ตัวแปร → ไปที่ Statistic แล้วติ๊กทุกอย่าง
   - ยกเว้น Cut point, Percentile, Values are group midpoint 
   → กด OK 
 
-สร้างกราฟ Historgram
-
+3. สร้างกราฟ Historgram
 - Analyze → Descriptive Statistics → Frequencies → Chart → Histogram + เลือก Show normal curve
 
-ทำ K-S Test
-
+4. ทำ K-S Test
 - Analyze → Descriptive Statistics → Explore → ใส่ตัวแปรใน Dependent List → กด Plots → ติ้ก Normality plot with test → กด Continue → ไปที่ Option → เลือก Exclude cases pairwise
 
-ทำ Levene's test
-
+5. ทำ Levene's test
 - Analyze → Descriptive Statistics → Explore → ใส่ตัวแปรใน Dependent List → กด Plots → ติ้ก Normality plot with test → ช่อง Spread vs Level with Lavene Test เลือก Untransformed
 
 
-## ลด Bias
-
-เขียนแล้ว ด้านบน [+SPSS x Data Analysis: Outlier-Detection](https://paper.dropbox.com/doc/SPSS-x-Data-Analysis-Outlier-Detection-M7cT1Uof2SwF468FgabCl#:uid=163973896164742479249473&amp;h2=Outlier-Detection) 
-
+## Remove Bias
+ด้วยการ[หา Outlier + Influence + Leverage](/Data/DataCleansing/#outlier-detection)
 
 ## Heterogeneity of variance
-
 Analyze → Descriptive Statistics → Explore → ใส่ Dependent List, Factor List → Plot → เลือก Untransformed
 
-ถ้า significant (< 0.05) = ไม่มี Heterogeneity of variance = ดี
-
+ถ้า significant (ค่าน้อยกว่า 0.05) = ไม่มี Heterogeneity of variance = ดี
 
 ## Linearity
-
 ข้อมูลมีการเรียงอย่างเป็นเส้นตรง + เช็คว่าตัวแปรนั้นเป็นแบบ Continuous 
 Graph → Chart Builder → Scatter/Dot → Simple Scatter → เอาตัวแปรไปใส่กราฟ → กด OK
-
-
 
 ## Correlations Model
 
@@ -59,8 +47,7 @@ Analyze > Correlation > Bivariate → ใส่ตัวแปรเข้า Va
 
 
 ## Correlations Type
-
-http://www.differencebetween.net/business/marketing-business/differences-between-bivariate-and-partial-correlation/
+[http://www.differencebetween.net/business/marketing-business/differences-between-bivariate-and-partial-correlation/](http://www.differencebetween.net/business/marketing-business/differences-between-bivariate-and-partial-correlation/)
 
 | **Bivariate**               | **Partial**                                                                                 |
 | --------------------------- | ------------------------------------------------------------------------------------------- |
@@ -69,12 +56,11 @@ http://www.differencebetween.net/business/marketing-business/differences-between
 
 1. The bivariate correlation refers to the analysis to two variables, often denoted as X and Y – mainly for the purpose of determining the empirical relationship they have.
 2. The partial correlation measures the degree between two random variables, with the effect of a set of controlling random variables removed.
-## Chi-Square Test
 
+## Chi-Square Test
 การทดสอบ เพื่อวัดความเป็น Independent ของ 2 กลุ่ม
 
-**Assum****p****tion****s**
-
+**Assumptions**
 1. ตัวแปรต้น → ระดับหมวดหมู่
 2. ข้อมูลที่เก็บมาอยู่ในหลายหมวดหมู่ไม่ได้ ต้องอยู่ในหมวดหมู่ใดหมวดหมู่หนึ่ง 
 
@@ -85,16 +71,16 @@ http://www.differencebetween.net/business/marketing-business/differences-between
 | **Alternative** | A & B ไม่มีความเป็น Independent ต่อกัน (Dependent ต่อกัน) |
 
 
-**How to use**
+**How to use**<br>
 Analyze > Descriptive Statistics > Crosstabs → Statistic → เอาประเภทไปใส่ Column และ Row → เลือก Chi-Square, Norminal (Contingency Coefficient, Phi & Cramer’s V, Lambda)
 
 ไปที่ Cell แล้วเลือก Count (Observed, Expected), Z-Test (ทุกอัน), Percentage (ทุกอัน), Residual (Standardized)
 
-**Fisher Exact Test**
+**Fisher Exact Test**<br>
 หากว่าค่า Sample Size นั้นน้อย (ค่า Expected Count ในตารางคาดเดา) ให้ใช้ Fisher Exact Test แทน
 ไปที่ Exact → เลือก Exact
 
-**Interpretation**
+**Interpretation**<br>
 โดยใช้ค่า Phi ( Φ ) หรือ/และ ค่า Cramér’s V 
 
 |                      | Phi ( Φ )                         | Cramér’s V ( φ*c* ) |
@@ -113,13 +99,11 @@ Analyze > Descriptive Statistics > Crosstabs → Statistic → เอาปร�
 
 การเลือกนั้น ทำให้แล้วแต่ว่าแต่ละตัวแปรนั้นสำคัญมั้ย ถ้าไม่สำคัญก็ไม่ต้องเพื่ม
 
-Forced Entry (ENTER Mode) [default]
+- Forced Entry (ENTER Mode) [เป็นค่า default]
+    - เข้าทีเดียวทุกตัว ไม่สนใจว่าตัวแปรไหนจะสำคัญหรือไม่ และไม่เอาออกด้วย
 
-- เข้าทีเดียวทุกตัว ไม่สนใจว่าตัวแปรไหนจะสำคัญหรือไม่ และไม่เอาออกด้วย
-
-Enter and Remove (STEPWISE Mode)
-
-- เลือกตัวที่สำคัญที่สุดก่อน แล้วค่อยๆเพื่มทีละตัว ตามความสำคัญ หากไม่สำคัญก็ไม่ต้องเข้า
+- Enter and Remove (STEPWISE Mode)
+    - เลือกตัวที่สำคัญที่สุดก่อน แล้วค่อยๆเพื่มทีละตัว ตามความสำคัญ หากไม่สำคัญก็ไม่ต้องเข้า
 
 โดยการเลือกนั้น SPSS จะเลือกจากค่า Chi-Square ที่เปลี่ยนไป ว่าไปในทิศทางที่ดีขึ้นหรือไม่
 
@@ -128,10 +112,10 @@ Enter and Remove (STEPWISE Mode)
 
 ใช้เพื่อวัด Independent of Error (Observations)
 
-**How to use**
+**How to use**<br>
 Linear Regression → ปุ่ม Statistics
 
-**Interpretation**
+**Interpretation**<br>
 ค่าต้องอยู่เท่ากับ 2 ± 0.5 จะถือว่าดีมาก
 หากค่าเกิน 2 ± 2 จะถือว่ารับไม่ได้ มีปัญหา Independent of Error
 
