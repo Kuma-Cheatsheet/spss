@@ -1,8 +1,10 @@
-# Welcome to SPSS
-This cheatsheet is for using SPSS in a efficient way.
-
-If you have spotted some issues, please create a new [isssue]().
-
 ---
+home: true
+heroImage: 'https://avatars1.githubusercontent.com/u/44744915'
+heroText: Welcome to SPSS
 
-Created by [@sagelga]() and Uncle G
+actionText: Get Started →
+actionLink: /Data/DataCleansing/
+
+footer: For contributing guidelines, please check out http://kuma-cheatsheet.github.io for more information.
+---
